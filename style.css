@@ -17,17 +17,28 @@ body {
   width: 50vw;
 }
 
-.form-container {
+.text-and-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .sign-up {
+  position: relative;
+  left: 100px;
   border-radius: 20px;
   padding: 0.5rem;
   border: none;
   color: white;
   width: 8rem;
   margin: 10px;
-  background-color: rgb(255, 82, 99);
+  background-color: rgb(255, 45, 66);
+}
+
+.small-logo {
+  position: relative;
+  bottom: 400px;
+  right: 250px;
 }
 
 .section2 {
