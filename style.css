@@ -5,6 +5,7 @@
 body {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   height: 100vh;
   width: 100vw;
   font-size: 16px;
@@ -18,6 +19,17 @@ body {
   width: 50vw;
 }
 
+h1 {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+h2 {
+  color: rgb(177, 177, 177);
+}
+
 .text-and-fields {
   display: flex;
   flex-direction: column;
@@ -26,13 +38,13 @@ body {
 
 .sign-up {
   position: relative;
-  left: 100px;
+  left: 120px;
   border-radius: 20px;
-  padding: 0.5rem;
+  padding: 0.75rem;
   border: none;
   color: white;
   width: 8rem;
-  margin: 10px;
+  margin: 15px;
   background-color: rgb(255, 45, 66);
 }
 
@@ -46,29 +58,19 @@ form > div {
   margin: 10px;
 }
 
+input {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .custom-field {
   font-size: 14px;
   position: relative;
   padding-top: 20px;
   margin-bottom: 5px;
-}
-
-.custom-field input {
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 0;
-  border-top-left-radius: 3px;
-  border-top-left-radius: 3px;
-  background-color: linear-gradient(90deg, #ccc, #ccc) left bottom/100% 2px
-      no-repeat,
-    linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
-  padding: 12px;
-  border-radius: 3px;
-  width: 350px;
-  outline: none;
-  font-size: 14px;
 }
 
 .custom-field .placeholder {
@@ -86,6 +88,25 @@ form > div {
   font-size: 10px;
   color: #222;
   transition-delay: 0.1s;
+}
+
+.custom-field input {
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  background: linear-gradient(90deg, #222, #222) center bottom/0 2px no-repeat,
+    linear-gradient(90deg, #ccc, #ccc) left bottom/100% 2px no-repeat,
+    linear-gradient(90deg, #ffffff, #ffffff) left bottom/100% no-repeat;
+  transition: background-size 0.3s ease;
+  padding: 12px;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+}
+
+.custom-field input:valid,
+.custom-field input:focus {
+  background-size: 100% 2px, 100% 2px, 100%;
 }
 
 .container-one {
@@ -116,4 +137,5 @@ p {
   align-items: center;
   background-color: rgb(240, 242, 246);
   width: 50vw;
+  margin: 0px;
 }

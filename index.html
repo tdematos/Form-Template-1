@@ -12,6 +12,12 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="section1">
@@ -26,13 +32,19 @@
         </div>
       </div>
       <div class="text-and-fields">
-        <h1>This is the Title</h1>
-        <h2>Sign up with no Obligation</h2>
+        <h1>Portfolio Sample</h1>
+        <h2>Created by a Dev called Thiago</h2>
         <div class="form-container">
           <form action="example.com/path" method="post">
             <div>
-              <label class="custom-field" for="full_name">
-                <input type="text" id="full_name" required />
+              <label class="custom-field" for=full_name">
+                <input
+                  type="text"
+                  id="full_name"
+                  required
+                  minlength="2"
+                  maxlength="35"
+                />
                 <span class="placeholder">Full name</span></label
               >
             </div>
