@@ -44,8 +44,35 @@ h2 {
   border: none;
   color: white;
   width: 8rem;
-  margin: 15px;
+  margin: 25px;
   background-color: rgb(255, 45, 66);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.sign-up span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.sign-up span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.sign-up:hover span {
+  padding-right: 25px;
+}
+
+.sign-up:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 *,
@@ -130,6 +157,18 @@ p {
   margin-bottom: 10px;
 }
 
+p a {
+  text-decoration: none;
+  color: rgb(255, 45, 66);
+  font-weight: bold;
+}
+
+.placeholder::before {
+  content: "*";
+  color: red;
+  font-size: 14px;
+}
+
 .section2 {
   display: flex;
   flex-direction: column;
@@ -138,4 +177,52 @@ p {
   background-color: rgb(240, 242, 246);
   width: 50vw;
   margin: 0px;
+}
+
+.logo-container,
+.small-logo {
+  background-repeat: no-repeat;
+  background-position: left top;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.logo-container,
+.small-logo {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
 }
